@@ -1,29 +1,32 @@
 //
 //  ViewController.m
-//  Player
-//
-//  Created by mezhevikin on 18.11.13.
-//  Copyright (c) 2013 Mezhevikin. All rights reserved.
 //
 
 #import "ViewController.h"
-
-@interface ViewController ()
-
-@end
+#import "PlayerViewController.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 @implementation ViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning
+- (IBAction)showAVPlayer:(id)sender
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    PlayerViewController *playerViewController  = [PlayerViewController sharedManager];
+    [playerViewController playRemoteFile];
+    [self.navigationController pushViewController:playerViewController animated:YES];
+}
+
+- (IBAction)showMediaPlayer:(id)sender
+{
+    
+    MPMoviePlayerViewController *movieController = [[MPMoviePlayerViewController alloc] initWithContentURL:[NSURL URLWithString:@"http://www-download.1tv.ru/promorolik/2013/11/VU-20131115-news.mp4"]];
+
+    [self presentMoviePlayerViewControllerAnimated:movieController];
+    [movieController.moviePlayer play];
 }
 
 @end

@@ -21,6 +21,8 @@
 		CE32A479183A19170094976D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE32A45B183A19170094976D /* UIKit.framework */; };
 		CE32A481183A19170094976D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE32A47F183A19170094976D /* InfoPlist.strings */; };
 		CE32A483183A19170094976D /* PlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE32A482183A19170094976D /* PlayerTests.m */; };
+		CE32A48E183A19330094976D /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE32A48D183A19330094976D /* PlayerViewController.m */; };
+		CE32A493183A58F30094976D /* PlayerVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE32A492183A58F30094976D /* PlayerVideoView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		CE32A47E183A19170094976D /* PlayerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PlayerTests-Info.plist"; sourceTree = "<group>"; };
 		CE32A480183A19170094976D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CE32A482183A19170094976D /* PlayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerTests.m; sourceTree = "<group>"; };
+		CE32A48C183A19330094976D /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		CE32A48D183A19330094976D /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
+		CE32A491183A58F30094976D /* PlayerVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerVideoView.h; sourceTree = "<group>"; };
+		CE32A492183A58F30094976D /* PlayerVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerVideoView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +118,8 @@
 		CE32A45D183A19170094976D /* Player */ = {
 			isa = PBXGroup;
 			children = (
+				CE32A491183A58F30094976D /* PlayerVideoView.h */,
+				CE32A492183A58F30094976D /* PlayerVideoView.m */,
 				CE32A466183A19170094976D /* AppDelegate.h */,
 				CE32A467183A19170094976D /* AppDelegate.m */,
 				CE32A469183A19170094976D /* Main.storyboard */,
@@ -119,6 +127,8 @@
 				CE32A46D183A19170094976D /* ViewController.m */,
 				CE32A46F183A19170094976D /* Images.xcassets */,
 				CE32A45E183A19170094976D /* Supporting Files */,
+				CE32A48C183A19330094976D /* PlayerViewController.h */,
+				CE32A48D183A19330094976D /* PlayerViewController.m */,
 			);
 			path = Player;
 			sourceTree = "<group>";
@@ -199,6 +209,13 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = Mezhevikin;
 				TargetAttributes = {
+					CE32A453183A19170094976D = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
 					CE32A474183A19170094976D = {
 						TestTargetID = CE32A453183A19170094976D;
 					};
@@ -250,7 +267,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE32A46E183A19170094976D /* ViewController.m in Sources */,
+				CE32A48E183A19330094976D /* PlayerViewController.m in Sources */,
 				CE32A468183A19170094976D /* AppDelegate.m in Sources */,
+				CE32A493183A58F30094976D /* PlayerVideoView.m in Sources */,
 				CE32A464183A19170094976D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
